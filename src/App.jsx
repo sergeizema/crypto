@@ -1,8 +1,19 @@
-import React from 'react';
-import { DatePicker } from 'antd';
+import { Layout } from "antd";
+
+import AppHeader from "./components/layout/AppHeader";
+import AppSider from "./components/layout/AppSider";
+import AppContent from "./components/layout/AppContent";
 
 const App = () => {
-  return <DatePicker />;
+  return (
+    <Layout>
+      <AppHeader />
+      <Layout>
+        <AppSider />
+        <AppContent />
+      </Layout>
+    </Layout>
+  );
 };
 
 export default App;
